@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slider_drawer/flutter_slider_drawer.dart';
+import 'package:riyaz_demo/demo_page.dart';
 import 'package:riyaz_demo/list_view.dart';
 import 'package:riyaz_demo/menu_widget.dart';
+import 'package:riyaz_demo/model/student_model.dart';
 import 'package:riyaz_demo/second_page.dart';
 import 'package:riyaz_demo/third_page.dart';
 
@@ -18,6 +20,11 @@ String btnText1= "Button One";
 GlobalKey<SliderMenuContainerState> _key =
 new GlobalKey<SliderMenuContainerState>();
 String title= "Home";
+String data = "This is a data";
+StudentDetails stdDetails1= StudentDetails(
+    "Riyajul", "101", "Gopalganj", "01751285853", "21");
+StudentDetails stdDetails2= StudentDetails(
+    "Momin", "102", "Ghonapara", "017000000", "25");
 
 class _MyHomePageState extends State<MyHomePage> {
   @override
@@ -226,7 +233,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     },
                     child: Text(btnText1)
                 ),
-              )
+              ),
+              SizedBox(height: 30,),
+              ElevatedButton(
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>DemoPage(strText: data,)));
+                  },
+                  child: Text("Demo Page"),
+              ),
             ],
 
           ),

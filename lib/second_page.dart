@@ -23,7 +23,6 @@ class _SecondPageState extends State<SecondPage> {
 
       body: Column(
         children: [
-          
           InkWell(
             onDoubleTap: (){
               setState(() {
@@ -43,8 +42,9 @@ class _SecondPageState extends State<SecondPage> {
                 duration: Duration(milliseconds: 3000),
             child: Image.network(avatarSrc)),
           ),
+
         ],
-      )
+      ),
     );
   }
 }
