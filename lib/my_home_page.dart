@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slider_drawer/flutter_slider_drawer.dart';
@@ -5,6 +7,7 @@ import 'package:riyaz_demo/demo_page.dart';
 import 'package:riyaz_demo/list_view.dart';
 import 'package:riyaz_demo/menu_widget.dart';
 import 'package:riyaz_demo/model/student_model.dart';
+import 'package:riyaz_demo/new_page.dart';
 import 'package:riyaz_demo/second_page.dart';
 import 'package:riyaz_demo/third_page.dart';
 
@@ -241,8 +244,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                   child: Text("Demo Page"),
               ),
-            ],
 
+              SizedBox(height: 30,),
+              ElevatedButton(
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>NewPage()));
+                  },
+                  child: Text("New Page"))
+
+
+
+            ],
           ),
         ),
       ),
