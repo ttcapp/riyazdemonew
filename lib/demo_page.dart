@@ -1,4 +1,6 @@
 
+
+
 import 'package:flutter/material.dart';
 import 'package:riyaz_demo/model/student_model.dart';
 
@@ -24,7 +26,11 @@ class _DemoPageState extends State<DemoPage> {
         ),
         body: Column(
           children: [
-            Text(widget.strText)
+            Text(widget.strText),
+            Text(widget.stdObj.id),
+            Text(widget.stdObj.address),
+            Text(widget.stdObj.age),
+            Text(widget.stdObj.number),
           ],
         ),
       ),

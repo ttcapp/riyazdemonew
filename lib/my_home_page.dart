@@ -237,7 +237,7 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(height: 30,),
               ElevatedButton(
                   onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>DemoPage(strText: data,)));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>DemoPage(strText: data, stdObj: stdDetails1,)));
                   },
                   child: Text("Demo Page"),
               ),
